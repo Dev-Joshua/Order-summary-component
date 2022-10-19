@@ -1,0 +1,103 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://henokhm.github.io/frontend-mentors-order-summary-component/images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: hsl(225, 100%, 98%);
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 350px;
+  border-radius: 2em;
+  background-color: #fff;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+}
+.card h2 {
+  margin-top: 2em;
+  font-weight: 800;
+}
+.card p {
+  font-weight: 700;
+  line-height: 1.4;
+  width: 80%;
+  margin: 1em auto;
+  opacity: 0.6;
+  font-size: 16px;
+}
+.card-details {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "img h3 a"
+    "img p  a";
+  background-color: hsl(225, 100%, 98%);
+  margin: 1em;
+  padding: 1em;
+}
+.card-details img {
+  width: 100%;
+  grid-area: img;
+  justify-self: center;
+  align-self: center;
+}
+.card-details h3 {
+  grid-area: h3;
+  justify-self: start;
+  margin: 0;
+  padding-left: 1em;
+  font-size: 16px;
+  font-weight: 800;
+}
+.card-details p {
+  grid-area: p;
+  justify-self: start;
+  margin: 0;
+  opacity: 0.5;
+}
+.card-details a {
+  grid-area: a;
+  justify-self: center;
+  align-items: center;
+  color: hsl(245, 75%, 52%);
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 14px;
+}
+.card button {
+  display: inline-block;
+  color: #fff;
+  background: hsl(245, 75%, 52%);
+  margin: 1em;
+  padding: 1em 2em;
+  border-radius: 1em;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  letter-spacing: 1px;
+}
+.card .cancel-ord {
+  color: #000;
+  opacity: 0.5;
+  text-decoration: none;
+  font-weight: 700;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
